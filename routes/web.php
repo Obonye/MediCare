@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Listing;
-
+use App\Http\Controllers\navbarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@ use App\Models\Listing;
 |
 */
 //All lsitings
-
+/*
 Route::get('/',function(){
     return view('listings',[
         'heading'=>'Latest Listings',
@@ -30,3 +30,18 @@ Route::get('/listing{id}',function($id){
         'listing'=>Listing::find($id)
     ]);
 });
+*****/
+//homepage route
+Route::get('/',function(){
+    return view('homepage');
+});
+Route::get('/login',function(){
+    return view('login');
+});
+Route::get('/signup',function(){
+    return view('signup');
+});
+Route::get('/sysAdmin',function(){
+    return view('sys_admin_dashboard');
+});
+//Route::get('/dashboard',[navbarController::class,'getName']);
