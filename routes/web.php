@@ -45,3 +45,13 @@ Route::get('/sysAdmin',function(){
     return view('sys_admin_dashboard');
 });
 //Route::get('/dashboard',[navbarController::class,'getName']);
+
+Route::get('/patient',function(){
+    return view('patientDashboard');
+});
+Route::get('/booking',function(){
+    return view('booking');
+});
+Route::get('/assisstant',function(){
+    return view('assisstant');
+});
